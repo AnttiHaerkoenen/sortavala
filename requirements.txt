@@ -1,0 +1,44 @@
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1597959372343/work
+branca==0.4.1
+brotlipy==0.7.0
+Cartopy @ file:///home/conda/feedstock_root/build_artifacts/cartopy_1596899868096/work
+certifi==2020.6.20
+cffi @ file:///home/conda/feedstock_root/build_artifacts/cffi_1595805769248/work
+chardet==3.0.4
+click==7.1.2
+click-plugins==1.1.1
+cligj==0.5.0
+cryptography @ file:///home/conda/feedstock_root/build_artifacts/cryptography_1595348770643/work
+cycler==0.10.0
+Fiona==1.8.13
+folium==0.11.0
+GDAL==3.1.2
+geopandas @ file:///home/conda/feedstock_root/build_artifacts/geopandas_1594925563431/work
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
+Jinja2==2.11.2
+kiwisolver==1.2.0
+MarkupSafe==1.1.1
+matplotlib @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-base_1597952250975/work
+munch==2.5.0
+numpy @ file:///home/conda/feedstock_root/build_artifacts/numpy_1597938342049/work
+olefile==0.46
+OWSLib @ file:///home/conda/feedstock_root/build_artifacts/owslib_1591376955812/work
+pandas @ file:///home/conda/feedstock_root/build_artifacts/pandas_1598294451012/work
+Pillow @ file:///home/conda/feedstock_root/build_artifacts/pillow_1594213113401/work
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
+pyepsg==0.4.0
+pyOpenSSL==19.1.0
+pyparsing==2.4.7
+pyproj @ file:///home/conda/feedstock_root/build_artifacts/pyproj_1595910437254/work
+pyshp==2.1.0
+PySocks==1.7.1
+python-dateutil==2.8.1
+pytz==2020.1
+PyYAML==5.3.1
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1592425495151/work
+Rtree==0.9.4
+scipy @ file:///home/conda/feedstock_root/build_artifacts/scipy_1595583577416/work
+Shapely @ file:///home/conda/feedstock_root/build_artifacts/shapely_1597990524923/work
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
+tornado==6.0.4
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1595434816409/work
