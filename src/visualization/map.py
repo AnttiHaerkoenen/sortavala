@@ -7,7 +7,9 @@ import folium
 
 
 def make_web_map(
+        *,
         layers=None,
+        input_dir,
 ):
     if not layers:
         layers = []
@@ -16,10 +18,9 @@ def make_web_map(
         location=(61.703, 30.695),
         zoom_start=15,
     )
+
     for layer_name in layers:
         layer = gpd.read_file(input_dir / f'{layer_name}.shp')
-        layer.set_crs(epsg=3857, allow_override=True, inplace=True)
-        layer.to_crs(epsg=4326, inplace=True)
         layer = layer.to_json()
         folium.GeoJson(
             layer,
@@ -32,7 +33,7 @@ def make_web_map(
 
 
 if __name__ == '__main__':
-    input_dir = Path('../../data') / 'raw'
+    data_dir = Path('../../data')
     map_dir = Path('../../reports/figures')
 
     layers = [
@@ -44,5 +45,5 @@ if __name__ == '__main__':
         'sheds'
     ]
 
-    map = make_web_map(layers)
+    map = make_web_map(layers=layers, input_dir=data_dir / 'interim')
     map.save(str(map_dir / 'map.html'))
