@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     for l in layers:
         layer = gpd.read_file(input_dir / f'{l}.shp')
-        layer = layer.rotate(-9, origin=(3416357, 8789352)).translate(xoff=50, yoff=-70)
+        layer.geometry = layer.rotate(-9, origin=(3416357, 8789352)).translate(xoff=50, yoff=-70)
         layer.set_crs(epsg=3857, allow_override=True, inplace=True)
         layer = layer.to_crs(epsg=4326)
         layer.to_file(output_dir / f'{l}.shp')
