@@ -111,6 +111,7 @@ def plot_significance(
         markersize=5,
         color='red',
     )
+
     return fig
 
 
