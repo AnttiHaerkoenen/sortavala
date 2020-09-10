@@ -126,7 +126,7 @@ if __name__ == '__main__':
         'q2': status_data[status_data['quartile'] == 2]['plot_number'].to_list(),
         'q3': status_data[status_data['quartile'] == 3]['plot_number'].to_list(),
         'q4': status_data[status_data['quartile'] == 4]['plot_number'].to_list(),
-        'gentry': status_data[status_data['status'] == 'g']['plot_number'].to_list(),
+        # 'gentry': status_data[status_data['status'] == 'g']['plot_number'].to_list(),
         'councillors': status_data[status_data['status'] == 'c']['plot_number'].to_list(),
         'status_elites': status_data[status_data['status'].isin(list('gc'))]['plot_number'].to_list(),
     }
