@@ -24,15 +24,21 @@ if __name__ == '__main__':
     plots = plots.to_crs(epsg=3067)
     plots['distance'] = plots.geometry.centroid.distance(square)
     plots = pd.DataFrame(plots)
-    plots.quartile.fillna(0, inplace=True)
-    plots['quartile'] = plots.quartile.apply(lambda c: int(c))
-    plots.plot(
-        x='distance',
-        y='tax',
-        kind='scatter',
-        c='quartile',
-        colormap=plt.get_cmap('Set2', 4),
-        colorbar=False,
+    plots.quartile.fillna('NA', inplace=True)
+    plots['quartile'] = plots.quartile.apply(lambda c: int(c) if not isinstance(c, str) else c)
+    gentry = plots.status == 'g'
+    plots.loc[gentry, 'quartile'] = 'gentry'
+    # plots.plot(
+    #     x='distance',
+    #     y='tax',
+    #     kind='scatter',
+    #     c='quartile',
+    #     colormap=plt.get_cmap('Set2', 4),
+    #     colorbar=False,
+    # )
+    plots.boxplot(
+        column='distance',
+        by='quartile',
     )
     plt.savefig(fig_dir / 'dist_plot.png')
     plt.show()
