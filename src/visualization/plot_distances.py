@@ -3,7 +3,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import geopandas as gpd
-from shapely.geometry import Point
+from shapely.geometry import Point, LineString
 import matplotlib.pyplot as plt
 
 
@@ -19,6 +19,7 @@ if __name__ == '__main__':
     fig_dir = Path('../../reports/figures')
     data_dir = Path('../../data') / 'processed'
     square = Point(695_240, 6_846_340)
+    church_street = LineString([(695_000, 6_846_450), (695_300, 6_846_450)])
 
     plots = gpd.read_file(data_dir / 'plots.shp', index_col=0).set_index('number', drop=True)
     plots = plots.to_crs(epsg=3067)
