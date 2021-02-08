@@ -34,7 +34,7 @@ if __name__ == '__main__':
     gentry = plots.status == 'g'
     plots.loc[gentry, 'quartile'] = 'gentry'
     plots = distances(plots, {'Market square': square, 'Church street': church_street})
-    order = ['gentry', 1, 2, 3, 4, 'NA']
+    order = ['gentry', 4, 3, 2, 1, 'NA']
     plt.rc('legend', loc='upper center')
     plot_1 = sns.boxplot(
         y='distance',
